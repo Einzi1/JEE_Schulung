@@ -5,5 +5,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/kv-common"/>
 	<classpathentry kind="var" path="JBOSS_HOME/bin/client/jboss-client.jar" sourcepath="/JBOSS_HOME/jee-src/ejb-api"/>
+	<classpathentry kind="lib" path="lib/jersey-client-1.1.0-ea.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-core-1.1.0-ea.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-json-1.1.0-ea.jar"/>
+	<classpathentry kind="lib" path="lib/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jsr311-api-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

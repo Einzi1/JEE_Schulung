@@ -10,11 +10,21 @@
 	<module>
 		<ejb>kvMain.jar</ejb>
 	</module>
-	<!-- <module> <ejb>kvWS.jar</ejb> </module> -->
+	<!-- 
+	<module>
+		<ejb>kvWS.jar</ejb>
+	</module>
+	 -->
 	<module>
 		<web>
 			<web-uri>kvWeb.war</web-uri>
 			<context-root>/kv</context-root>
+		</web>
+	</module>
+	<module>
+		<web>
+			<web-uri>kvRest.war</web-uri>
+			<context-root>/kvRest</context-root>
 		</web>
 	</module>
 </application>

@@ -2,6 +2,9 @@ package de.kiltz.kv.domain;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Kunde implements Serializable {
 	private Long id;
 	private String name;
