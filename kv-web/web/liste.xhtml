@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+  <title>Kundenverwaltung</title>
+  <link rel="STYLESHEET" type="text/css" href="include/formate.css"/>
+</h:head>
+<h:body>
+
+<h2>Kundenliste</h2>
+  <h:form id="formSuche">
+      <h:inputText id="suchBegriff" 
+          value="${kunden.suchBegriff}"/>
+    <h:commandButton id="suche" value="Los"
+        action="${kunden.suche}"/>
+  </h:form>
+
+<h:outputText value="${kunden.info}"/>
+
+<h:dataTable value="${kunden.liste}" var="kunde">
+<h:column>
+	<f:facet name="header">Name</f:facet>
+	${kunde.name}
+</h:column>
+
+</h:dataTable> 
+
+
+<h2>Neuer Kunde</h2>
+  <h:form id="formNeu">
+      <h:inputText id="neuerName" 
+          value="${kunden.neuerName}"/>
+    <h:commandButton id="neu" value="Eintragen"
+        action="${kunden.neu}"/>
+  </h:form>
+<h:outputText value="${kunden.fehlerMeldung}"/>
+
+</h:body></html>

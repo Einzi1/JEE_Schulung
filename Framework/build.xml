@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<project name="Gemeinsames Script" default="deploy" >
+
+	<property environment="env" />
+
+	<property file="${basedir}/../Framework/ant.properties"/>
+	
+	<target name="deploy">
+          <antcall target="packeUndKopiere">
+          	<param name="endung" value="jar"/>
+          	<param name="build.dir" value="${basedir}/bin"/>
+          </antcall> 
+	</target>
+	<target name="deployWar">
+          <antcall target="packeUndKopiere">
+          	<param name="endung" value="war"/>
+          	<param name="build.dir" value="${basedir}/web"/>
+          </antcall> 
+	</target>
+
+	<target name="packeUndKopiere">
+		<jar jarfile="${appName}.${endung}">
+			<fileset dir="${build.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+        <copy file="${appName}.${endung}" todir="${jboss7.home}/standalone/deployments" />
+	</target>
+
+</project>
+

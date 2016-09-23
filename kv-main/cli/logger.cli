@@ -1,0 +1,8 @@
+# connect 10.23.155.69:9999
+connect localhost
+
+/subsystem=logging/size-rotating-file-handler=veronikaLogger:add(file={"relative-to"=>"jboss.server.log.dir", "path"=>"veronika.log"}, formatter="%-5.5p;%-24.24X{pgm};%d{yyMMdd_HHmmssSSS};%-13X{stnr};%m%n"
+
+/subsystem=logging/logger=de.finkonsens.veronika:add(use-parent-handlers=false,handlers=["veronikaLogger"])
+
+/subsystem=logging/logger=de.finkonsens.veronika:write-attribute(name=level,value=DEBUG)

@@ -1,0 +1,34 @@
+<xs:schema xmlns:tns="http://publisher.webservice.de/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+	targetNamespace="http://publisher.webservice.de/">
+	<xs:element name="getFreeMemory" type="tns:getFreeMemory" />
+	<xs:element name="getFreeMemoryResponse" type="tns:getFreeMemoryResponse" />
+	<xs:element name="getTime" type="tns:getTime" />
+	<xs:element name="getTimeResponse" type="tns:getTimeResponse" />
+	<xs:element name="getUser" type="tns:getUser" />
+	<xs:element name="getUserResponse" type="tns:getUserResponse" />
+	<xs:complexType name="getTime">
+		<xs:sequence />
+	</xs:complexType>
+	<xs:complexType name="getTimeResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="getUser">
+		<xs:sequence />
+	</xs:complexType>
+	<xs:complexType name="getUserResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="getFreeMemory">
+		<xs:sequence />
+	</xs:complexType>
+	<xs:complexType name="getFreeMemoryResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:long" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

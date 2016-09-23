@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<project name="Kundenverwaltung" default="deploy">
+
+	<property environment="env" />
+	<property name="appName" value="KundenverwaltungWs" />
+	<property name="endung" value="jar" />
+	<property name="build.dir" value="${basedir}/KundenverwaltungWs/bin" />
+
+	<target name="deploy">
+		<jar jarfile="${appName}.${endung}">
+			<fileset dir="${build.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<copy file="${appName}.${endung}" todir="${basedir}/Kundenverwaltung/ear" />
+	</target>
+</project>

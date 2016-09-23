@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<project name="kv" default="deploy" basedir="..">
+
+
+	<target name="deploy" depends="holeDieAnderen">
+		<property name="build.classes.dir" value="${basedir}/kv-main/bin" />
+		<property name="jboss7.home" value="c:/java/jboss-eap-6.4" />
+		<delete file="${basedir}/kv-main/ear/kv.ear" />
+		<jar jarfile="${basedir}/kv-main/ear/kvMain.jar">
+			<fileset dir="${build.classes.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<jar jarfile="${basedir}/kv-main/ear/kv.ear">
+			<fileset dir="${basedir}/kv-main/ear">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<copy file="${basedir}/kv-main/ear/kv.ear" todir="${jboss7.home}/standalone/deployments" />
+
+	</target>
+
+	<target name="holeDieAnderen">
+		<ant antfile="${basedir}/kv-common/build.xml" target="deploy"/>
+		<ant antfile="${basedir}/kv-web/build.xml" target="deploy"/>
+		<!--
+		<ant antfile="${basedir}/kv-ws/build.xml" target="deploy"/>
+		-->
+	</target>
+
+
+
+
+</project>
+

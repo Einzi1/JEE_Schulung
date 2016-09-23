@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<project name="bv" default="deploy" basedir="..">
+
+
+	<target name="deploy" depends="holeDieAnderen">
+		<property name="build.classes.dir" value="${basedir}/pro-main/bin" />
+		<property name="jboss7.home" value="/srv/jboss" />
+		<delete file="${basedir}/pro-main/ear/pro.ear" />
+		<jar jarfile="${basedir}/pro-main/ear/proMain.jar">
+			<fileset dir="${build.classes.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<jar jarfile="${basedir}/pro-main/ear/pro.ear">
+			<fileset dir="${basedir}/pro-main/ear">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<copy file="${basedir}/pro-main/ear/pro.ear" todir="${jboss7.home}/standalone/deployments" />
+
+	</target>
+
+	<target name="holeDieAnderen">
+		<ant antfile="${basedir}/pro-common/build.xml" target="deploy"/>
+		<ant antfile="${basedir}/pro-web/build.xml" target="deploy"/>
+	</target>
+
+
+
+
+</project>
+

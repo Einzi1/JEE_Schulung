@@ -1,0 +1,4 @@
+#connect 10.23.155.69:9999
+connect
+module add --name=com.oracle.jdbc --resources=ojdbc6.jar --dependencies=javax.api,javax.transaction.api
+/subsystem=datasources/jdbc-driver=oracle:add(driver-name=oracle,driver-module-name=com.oracle.jdbc,driver-xa-datasource-class-name=XA_DATASOURCE_CLASS_NAME)

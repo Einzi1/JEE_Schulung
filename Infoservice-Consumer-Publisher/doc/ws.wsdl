@@ -1,0 +1,90 @@
+<definitions
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://publisher.webservice.de/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://publisher.webservice.de/"
+	name="InfoserviceService">
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://publisher.webservice.de/"
+				schemaLocation="http://localhost:9090/infoservice?xsd=1" />
+		</xsd:schema>
+	</types>
+	<message name="getTime">
+		<part name="parameters" element="tns:getTime" />
+	</message>
+	<message name="getTimeResponse">
+		<part name="parameters" element="tns:getTimeResponse" />
+	</message>
+	<message name="getFreeMemory">
+		<part name="parameters" element="tns:getFreeMemory" />
+	</message>
+	<message name="getFreeMemoryResponse">
+		<part name="parameters" element="tns:getFreeMemoryResponse" />
+	</message>
+	<message name="getUser">
+		<part name="parameters" element="tns:getUser" />
+	</message>
+	<message name="getUserResponse">
+		<part name="parameters" element="tns:getUserResponse" />
+	</message>
+	<portType name="Infoservice">
+		<operation name="getTime">
+			<input wsam:Action="http://publisher.webservice.de/Infoservice/getTimeRequest"
+				message="tns:getTime" />
+			<output wsam:Action="http://publisher.webservice.de/Infoservice/getTimeResponse"
+				message="tns:getTimeResponse" />
+		</operation>
+		<operation name="getFreeMemory">
+			<input
+				wsam:Action="http://publisher.webservice.de/Infoservice/getFreeMemoryRequest"
+				message="tns:getFreeMemory" />
+			<output
+				wsam:Action="http://publisher.webservice.de/Infoservice/getFreeMemoryResponse"
+				message="tns:getFreeMemoryResponse" />
+		</operation>
+		<operation name="getUser">
+			<input wsam:Action="http://publisher.webservice.de/Infoservice/getUserRequest"
+				message="tns:getUser" />
+			<output wsam:Action="http://publisher.webservice.de/Infoservice/getUserResponse"
+				message="tns:getUserResponse" />
+		</operation>
+	</portType>
+	<binding name="InfoservicePortBinding" type="tns:Infoservice">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<operation name="getTime">
+			<soap:operation soapAction="" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="getFreeMemory">
+			<soap:operation soapAction="" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="getUser">
+			<soap:operation soapAction="" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="InfoserviceService">
+		<port name="InfoservicePort" binding="tns:InfoservicePortBinding">
+			<soap:address location="http://localhost:9090/infoservice" />
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,2 @@
+connect
+deploy -f ../ear/kv.ear

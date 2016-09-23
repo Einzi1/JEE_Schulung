@@ -1,0 +1,30 @@
+
+s. auch https://docs.jboss.org/author/display/AS7/Admin+Guide#AdminGuide-CommandLineInterface
+
+Anzeige aller System-Properties
+/core-service=platform-mbean/type=runtime:read-attribute(name=system-properties)
+
+Setzen von System-Properties
+/system-property=foo:add(value=bar)
+lesen
+/system-property=foo:read-resource
+löschen /system-property=foo:remove
+
+Liste der Subsysteme
+/:read-children-names(child-type=subsystem)
+
+Infos zu einem Subsystem
+/subsystem=datasources/data-source=ExampleDS:read-resource-description
+
+:take-snapshot()
+
+Auslesen der Internet-Adresse
+cd interface=public
+:read-resource(include-runtime=true)
+:read-attribute(name=resolved-address)
+
+
+Attribute auslesen
+/socket-binding-group=standard-sockets/socket-binding=https:read-attribute(name=port)
+Attribute ändern
+/socket-binding-group=standard-sockets/socket-binding=https:write-attribute(name=port,value=8444)

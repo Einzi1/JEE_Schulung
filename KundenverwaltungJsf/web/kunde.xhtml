@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Kunde hinzufügen</title>
+	<link rel="STYLESHEET" type="text/css" href="include/formate.css" />
+</h:head>
+<h:body>
+
+	<h2>Kunde (1)</h2>
+	<span id="rot"><h:outputText value="${kunde.info}" /></span>
+	<h:form id="form">
+		<h:panelGrid id="grid" columns="2">
+			<h:outputLabel value="Vorname:" />
+			<h:inputText id="vorname" value="${kunde.vorname}" />
+			<h:outputLabel value="Nachname:" />
+			<h:inputText id="nachname" value="${kunde.nachname}" />
+			<h:outputLabel value="Email:" />
+			<h:inputText id="email" value="${kunde.email}" />
+		</h:panelGrid>
+		<h:commandButton id="login" value="Speichern" action="${kunde.save}" />
+	</h:form>
+
+</h:body>
+</html>

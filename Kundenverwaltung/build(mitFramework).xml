@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<project name="Kundenverwaltung" default="deploy" basedir=".">
+
+	<property name="appName" value="Kundenverwaltung" />
+	<target name="deploy">
+		<ant antfile="${basedir}/../Framework/build.xml" target="deploy" />
+	</target>
+
+</project>
+

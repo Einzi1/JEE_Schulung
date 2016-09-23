@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="KundenSIBService" targetNamespace="http://ws.kv.kiltz.de/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.kv.kiltz.de/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://ws.kv.kiltz.de/" version="1.0" xmlns:tns="http://ws.kv.kiltz.de/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="holeKunde" type="tns:holeKunde"/>
+<xs:element name="holeKundeResponse" type="tns:holeKundeResponse"/>
+<xs:element name="neuerKunde" type="tns:neuerKunde"/>
+<xs:element name="neuerKundeResponse" type="tns:neuerKundeResponse"/>
+<xs:complexType name="holeKunde">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="holeKundeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kunde" type="tns:kundeXML"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="kundeXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="neuerKunde">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kunde" type="tns:kundeXML"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="neuerKundeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kunde" type="tns:kundeXML"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="holeKundeResponse">
+    <wsdl:part element="tns:holeKundeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="holeKunde">
+    <wsdl:part element="tns:holeKunde" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="neuerKunde">
+    <wsdl:part element="tns:neuerKunde" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="neuerKundeResponse">
+    <wsdl:part element="tns:neuerKundeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="KundenSEI">
+    <wsdl:operation name="holeKunde">
+      <wsdl:input message="tns:holeKunde" name="holeKunde">
+    </wsdl:input>
+      <wsdl:output message="tns:holeKundeResponse" name="holeKundeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="neuerKunde">
+      <wsdl:input message="tns:neuerKunde" name="neuerKunde">
+    </wsdl:input>
+      <wsdl:output message="tns:neuerKundeResponse" name="neuerKundeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KundenSIBServiceSoapBinding" type="tns:KundenSEI">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="holeKunde">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="holeKunde">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="holeKundeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="neuerKunde">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="neuerKunde">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="neuerKundeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KundenSIBService">
+    <wsdl:port binding="tns:KundenSIBServiceSoapBinding" name="KundenSIBPort">
+      <soap:address location="http://localhost:8080/kvWS/KundenSIB"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

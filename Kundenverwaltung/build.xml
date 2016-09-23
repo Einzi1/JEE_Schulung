@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<project name="Kundenverwaltung" default="deploy" basedir="..">
+	<target name="deploy" depends="holeDieAnderen">
+		<property name="build.classes.dir" value="${basedir}/Kundenverwaltung/bin" />
+		<property name="jboss7.home" value="c:/java/jboss-eap-6.4" />
+		<delete file="${basedir}/Kundenverwaltung/ear/Kundenverwaltung.ear" />
+		<jar jarfile="${basedir}/Kundenverwaltung/ear/Kundenverwaltung.jar">
+			<fileset dir="${build.classes.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<jar jarfile="${basedir}/Kundenverwaltung/ear/Kundenverwaltung.ear">
+			<fileset dir="${basedir}/Kundenverwaltung/ear">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<copy file="${basedir}/Kundenverwaltung/ear/Kundenverwaltung.ear" todir="${jboss7.home}/standalone/deployments" />
+
+	</target>
+
+	<target name="holeDieAnderen">
+		<ant antfile="${basedir}/KundenverwaltungJsf/build.xml" target="deploy" />
+		<ant antfile="${basedir}/KundenverwaltungWs/build.xml" target="deploy" />
+	</target>
+</project>
+

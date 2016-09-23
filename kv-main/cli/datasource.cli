@@ -1,0 +1,17 @@
+# connect 10.23.155.69:9999
+connect localhost
+data-source add \
+		--jta=true \
+    --name=Ora-DS \
+    --driver-name=oracle \
+    --driver-class=oracle.jdbc.OracleDriver \
+    --jndi-name=java:/jboss/datasources/Ora-DS \
+    --connection-url=jdbc:oracle:thin:@localhost:1521:xe \
+    --user-name=ora \
+    --password=labora \
+    --blocking-timeout-wait-millis=5000 \
+    --use-ccm=true \
+    --statistics-enabled=false
+    
+data-source enable --name=Ora-DS --persistent=true
+
