@@ -1,9 +1,11 @@
 package de.kundenverwaltung.rest;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class KundeXml {
+public class KundeXml implements Serializable {
 
 	private long id;
 	private String vorname;
