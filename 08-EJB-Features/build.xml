@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<project name="EJB3Features" default="deploy" basedir=".">
+
+	<property name="appName" value="EJB3Features" />
+
+	<property file="${basedir}/../Framework/ant.properties"/>
+
+	<target name="deploy">
+		<ant antfile="${basedir}/../Framework/build.xml" target="deploy"/>		
+	</target>
+
+</project>
+

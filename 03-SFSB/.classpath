@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JBOSS_HOME/modules/system/layers/base/javax/interceptor/api/main/jboss-interceptors-api_1.1_spec-1.0.1.Final-redhat-3.jar"/>
+	<classpathentry kind="var" path="JBOSS_HOME/bin/client/jboss-client.jar" sourcepath="/FRAMEWORK/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

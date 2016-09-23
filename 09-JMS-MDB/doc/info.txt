@@ -1,0 +1,31 @@
+https://docs.jboss.org/author/display/WFLY8/Messaging+configuration
+
+Start des Jboss mit standalone-full:
+standalone.bat -c standalone-full.xml
+
+Erzeugen der Queue und Topic:
+
+Im Element <jms-destinations> die Destinations einfügen:
+        <jms-queue name="testQueue">
+            <entry name="jms/queue/test"/>
+            <entry name="java:jboss/exported/jms/queue/test"/>
+        </jms-queue>
+        <jms-topic name="testTopic">
+            <entry name="jms/topic/test"/>
+            <entry name="java:jboss/exported/jms/topic/test"/>
+        </jms-topic>
+oder über die CLI
+
+Benutzer anlegen (chef, geheim-8 Gruppen: user, admin)
+
+Security-Settings die Rolle eintragen:
+    <security-settings>
+        <security-setting match="#">
+            <permission type="send" roles="user"/>
+            <permission type="consume" roles="user"/>
+            <permission type="createNonDurableQueue" roles="user"/>
+            <permission type="deleteNonDurableQueue" roles="user"/>
+        </security-setting>
+    </security-settings>
+ 
+ 

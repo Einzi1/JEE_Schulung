@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<project name="JPAEinstieg" default="deploy" basedir=".">
+
+	<property name="appName" value="EJB3JPAEinstieg" />
+	
+	<property file="${basedir}/../Framework/ant.properties"/>
+	
+	<target name="deploy">
+		<ant antfile="${basedir}/../Framework/build.xml" target="deploy"/>		
+	</target>
+	
+</project>
+
