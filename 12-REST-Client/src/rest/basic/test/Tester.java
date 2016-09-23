@@ -23,8 +23,7 @@ public class Tester {
 
 			System.out.println("Führe Ping aus...");
 			wr = wr.queryParam("text", "Ein Test");
-			String ret = wr.path("ping/").accept("text/plain")
-					.get(String.class);
+			String ret = wr.path("ping/").accept("text/plain").get(String.class);
 			System.out.println(String.format("Rückgabe: :\n%s", ret));
 
 		} catch (Exception e) {

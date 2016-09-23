@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/jersey-client-1.1.0-ea.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-client-1.1.0-ea.jar" sourcepath="C:/Users/Administrator/.m2/repository/com/sun/jersey/jersey-client/1.1.0-ea/jersey-client-1.1.0-ea-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jersey-core-1.1.0-ea.jar" sourcepath="C:/java/jersey/src/jersey-client"/>
 	<classpathentry kind="lib" path="lib/jettison-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/jersey-json-1.1.0-ea.jar"/>

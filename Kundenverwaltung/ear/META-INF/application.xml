@@ -12,6 +12,11 @@
 			<web-uri>KundenverwaltungJsf.war</web-uri>
 			<context-root>/kundenverwaltung</context-root>
 		</web>
+	<module>
+		<web>
+			<web-uri>KundenverwaltungRest.war</web-uri>
+			<context-root>/kundenverwaltungrest</context-root>
+		</web>
 	</module>
 	<module>
 			<ejb>KundenverwaltungWs.jar</ejb>

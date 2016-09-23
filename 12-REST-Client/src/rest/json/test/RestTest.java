@@ -5,7 +5,6 @@ import rest.json.DatenObjekt;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 
-
 /**
  *
  */
@@ -28,10 +27,8 @@ public class RestTest {
 			System.out.println("Hole Objekt...");
 			// DatenObjekt obj =
 			// wr.accept("application/json").get(DatenObjekt.class);
-			DatenObjekt obj = wr.accept("application/xml").get(
-					DatenObjekt.class);
-			System.out.println(String.format("Rückgabe:\n%s", obj
-					.getGleitZahl()));
+			DatenObjekt obj = wr.accept("application/xml").get(DatenObjekt.class);
+			System.out.println(String.format("Rückgabe:\n%s", obj.getGleitZahl()));
 			System.out.println("-----");
 
 			wr.type("application/json").put(obj);

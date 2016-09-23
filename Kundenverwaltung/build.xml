@@ -22,6 +22,7 @@
 	<target name="holeDieAnderen">
 		<ant antfile="${basedir}/KundenverwaltungJsf/build.xml" target="deploy" />
 		<ant antfile="${basedir}/KundenverwaltungWs/build.xml" target="deploy" />
+		<ant antfile="${basedir}/KundenverwaltungRest/build.xml" target="deploy" />
 	</target>
 </project>
 
