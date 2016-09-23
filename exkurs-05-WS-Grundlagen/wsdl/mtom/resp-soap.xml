@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: multipart/related;start="<rootpart*2baa32da-619c-4795-9e9d-117494797d15@example.jaxws.sun.com>";type="application/xop+xml";boundary="uuid:2baa32da-619c-4795-9e9d-117494797d15";start-info="text/xml"Transfer-Encoding: chunkedDate: Tue, 20 Apr 2010 11:34:58 GMTfbcf--uuid:2baa32da-619c-4795-9e9d-117494797d15Content-Id: 
+   <rootpart*2baa32da-619c-4795-9e9d-117494797d15@example.jaxws.sun.com>Content-Type: application/xop+xml;charset=utf-8;type="text/xml"Content-Transfer-Encoding: binary
+      <?xml version='1.0' encoding='UTF-8'?>
+         <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+            <S:Body>
+               <ns2:sendeRechnungPerPDFResponse xmlns:ns2="http://rechnung.service.jaxws.traudel.de/">
+                  <return>
+                     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:f1a2dab2-3036-4420-b61f-417227719b12@example.jaxws.sun.com"/>
+                  </return>
+               </ns2:sendeRechnungPerPDFResponse>
+            </S:Body>
+         </S:Envelope>--uuid:2baa32da-619c-4795-9e9d-117494797d15Content-Id: 
+         <f1a2dab2-3036-4420-b61f-417227719b12@example.jaxws.sun.com>Content-Type: application/octet-streamContent-Transfer-Encoding: binary%PDF-1.4%âãÏÓ499 0 obj 
+            <</Linearized 1/L 63584/O 501/E 13792/N 7/T 53556/H [ 749 293]>>endobj                xref499 220000000016 00000 n0000001230 00000 n0000001504 00000 n0000001828 00000 n0000002048 00000 n0000002754 00000 n0000003505 00000 n0000003748 00000 n0000003970 00000 n0000004198 00000 n0000004275 00000 n0000004938 00000 n0000004974 00000 n0000005806 00000 n0000006738 00000 n0000007638 00000 n0000008580 00000 n0000009476 00000 n0000010409 00000 n0000011122 00000 n0000001042 00000 n0000000749 00000 ntrailer
+            <</Size 521/Prev 53544/XRefStm 1042/Root 500 0 R/Info 25 0 R/ID[
+            <E5A965E660581119648D77B185DBA627>
+               <C1B753B48E3BCE48A9F1CA58E60023FD>]>>startxref0%%EOF          520 0 obj
+                  <</Length 193/C 220/Filter/FlateDecode/I 242/L 204/O 188/S 134>>streamxÚb```b``ÙÍÀÊÀÀñž��øX€¢, Þ—Ÿ›÷ù,—ûÂÀ�Ü0½¼rX#SàœC^Æ3\8ÝŠ95Î(/GU8Ýå@€š��”

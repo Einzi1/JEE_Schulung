@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Leeres Element mit einem Attribut -->
+	<xs:element name="Rebsorte">
+		<xs:complexType>
+			<xs:attribute name="art" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+<!-- Dezimal-Element mit einem eingeschränketen Attribut -->
+	<xs:element name="Preis">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="Waehrung" >
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="DM|EUR"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

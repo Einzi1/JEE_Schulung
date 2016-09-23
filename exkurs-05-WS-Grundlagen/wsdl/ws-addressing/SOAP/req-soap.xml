@@ -1,0 +1,25 @@
+POST /wsaddr/ping HTTP/1.1
+Content-type: text/xml;charset="utf-8"
+Soapaction: "http://wsaddr.traudel.de/PingWS/pingRequest"
+Accept: text/xml, multipart/related, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+User-Agent: JAX-WS RI 2.1.6 in JDK 6
+Host: 127.0.0.1:8888
+Connection: keep-alive
+Content-Length: 661
+
+<?xml version="1.0" ?>
+   <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+      <S:Header>
+         <To xmlns="http://www.w3.org/2005/08/addressing">http://localhost:8888/wsaddr/ping</To>
+         <Action xmlns="http://www.w3.org/2005/08/addressing">http://wsaddr.traudel.de/PingWS/pingRequest</Action>
+         <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">    
+            <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+         </ReplyTo>
+         <MessageID xmlns="http://www.w3.org/2005/08/addressing">uuid:6ff8b506-6b36-4333-aabc-081273123516</MessageID>
+      </S:Header>
+      <S:Body>
+         <ns2:ping xmlns:ns2="http://wsaddr.traudel.de/">
+            <arg0>sag was groÃŸes!</arg0>
+         </ns2:ping>
+      </S:Body>
+   </S:Envelope>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tz:Person 
+	xmlns:tz="http://www.kiltz.de/Schema/Seminar"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 	
+    xsi:schemaLocation="http://www.kiltz.de/Schema/Seminar person.xsd">
+	<tz:Name>Kiltz</tz:Name>
+	<tz:Vorname>Friedrich</tz:Vorname>
+</tz:Person>
+<!--
+	oder:
+	
+<Person 
+	xmlns="http://www.kiltz.de/Schema/Seminar"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 	
+    xsi:schemaLocation="http://www.kiltz.de/Schema/Seminar person.xsd">
+	<Name>Kiltz</Name>
+	<Vorname>Friedrich</Vorname>
+</Person>
+-->	

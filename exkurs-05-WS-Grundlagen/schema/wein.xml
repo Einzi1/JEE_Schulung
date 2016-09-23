@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- 
+	Wurzelelement: EineFlascheWein
+	Definition des Namespace "xsi" durch w3org
+	Dadurch ist das Attribut "noNamespaceSchemaLocation" definiert.
+-->
+<EineFlascheWein
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="wein.xsd">
+    <Jahrgang>1994</Jahrgang>
+    <Rebsorte Art="Huxelrebe"/>
+    <Qualifikation>Auslese</Qualifikation>
+    <Lage>Gutenberger Römerberg</Lage>
+    <Preis Waehrung="EUR">12.00</Preis>
+</EineFlascheWein>

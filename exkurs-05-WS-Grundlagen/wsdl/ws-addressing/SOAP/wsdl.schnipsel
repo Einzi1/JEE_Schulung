@@ -1,0 +1,19 @@
+Direkt unter definition
+
+	<wsp:UsingPolicy />
+	<!-- Die Policy -->
+	<wsp:Policy wsu:Id="traudelPolicy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+		<wsp:All>
+			<wsp:ExactlyOne>
+				<wsp:All>
+					<ns1:RMAssertion xmlns:ns1="http://docs.oasis-open.org/ws-rx/wsrmp/200702" />
+					<ns2:UsingAddressing xmlns:ns2="http://www.w3.org/2006/05/addressing/wsdl" />
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:All>
+	</wsp:Policy>
+
+und unter binding
+		<wsp:PolicyReference URI="#traudelPolicy" />
+	

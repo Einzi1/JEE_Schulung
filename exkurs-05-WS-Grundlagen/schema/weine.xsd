@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Friedrich Kiltz (Kiltz-Webanwendungen) -->
+<!-- mit Namespace  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  = Namespache xs, w3org-Konform 
+    targetNamespace="http://www.kiltz.de"               = definiert durch www.kiltz.de 
+    xmlns="http://www.kiltz.de"                         = defaultNamespace ist www.kiltz.de 
+    elementFormDefault="qualified">                     = jedes Element benötigt einen Namespace 
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.kiltz.de"   
+    xmlns="http://www.kiltz.de"             
+    elementFormDefault="qualified">
+-->
+<!-- ohne NameSpace Location -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="de">Die Beschreibung einer Flasche Wein</xs:documentation>
+	</xs:annotation>
+	<xs:element name="WeinListe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Wein" maxOccurs="unbounded"/>
+				<!-- bestimmt die Reihenfolge -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Wein">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Jahrgang"/>
+				<xs:element name="Rebsorte">
+					<xs:complexType>
+						<xs:attribute name="Art" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Geschmack" type="GeschmackTyp"/>
+				<xs:element name="Lage" type="xs:string"/>
+				<xs:element name="Qualifikation" type="xs:string" minOccurs="0"/>
+				<xs:element name="Zahlen" type="ZahlenTyp"/>
+				<!-- bestimmt die Reihenfolge -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ZahlenTyp">
+		<xs:sequence>
+			<xs:element name="Preis" type="PreisTyp"/>
+			<xs:element name="Menge" type="xs:string"/>
+			<xs:element name="WeinNummer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Jahrgang">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1900"/>
+				<xs:maxInclusive value="2004"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="GeschmackTyp">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Richtung" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PreisTyp">
+		<xs:simpleContent>
+			<xs:extension base="xs:float">
+				<xs:attribute name="Waehrung" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

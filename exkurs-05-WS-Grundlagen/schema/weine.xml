@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Das Wurzelelement -->
+<!-- mit NameSpace Location 
+<WeinListe xmlns="http://www.kiltz.de"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kiltz.de weine.xsd">
+-->
+<!-- ohne NameSpace Location -->
+<WeinListe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="weine.xsd">
+	<Wein>
+		<Jahrgang>2004</Jahrgang>
+		<Rebsorte Art="Weisser Burgunder"/>
+		<Geschmack Richtung="trocken">
+           Wir lassen diesen Wein 6 Monate in frischen handgearbeiteten 
+           Eichenholz Fässern reifen. Dieses alte Verfahren behalten wir nur 
+           ausgesuchten und besten Trauben, vor. Ein feines Bouquet und ein 
+           Traum aus Leichtigkeit und fruchtigen Aromen ist das Ergebnis. 
+        </Geschmack>
+		<Lage>
+			Kreuznacher Römerberg
+		</Lage>
+		<Zahlen>
+			<Preis>5.01</Preis>
+			<Menge>
+				0,5 l
+			</Menge>
+			<WeinNummer>
+				01
+			</WeinNummer>
+		</Zahlen>
+	</Wein>
+	<!-- Der nächste Datensatz -->
+	<Wein>
+		<Jahrgang>2000</Jahrgang>
+		<Rebsorte Art="Riesling"/>
+		<Geschmack Richtung="trocken">
+           Ein klassischer Riesling, sonnenverwöhnt und fruchtig. Er macht 
+           sowohl als Begleiter zu Käse und Fisch aber auch als Entree in 
+           einen stimmungsvollen Abend besonders viel Freude. 
+        </Geschmack>
+		<Lage>
+			Kirschroter Bobbes
+		</Lage>
+		<Zahlen>
+			<Preis>3.68</Preis>
+			<Menge>
+				0,75 l
+			</Menge>
+			<WeinNummer>
+				02
+			</WeinNummer>
+		</Zahlen>
+	</Wein>
+	<!-- Der nächste Datensatz -->
+	<Wein>
+		<Jahrgang>1998</Jahrgang>
+		<Rebsorte Art="Riseling Eiswein"/>
+		<Geschmack Richtung="trocken">
+           Lassen Sie sich verführen durch sein fruchtiges Bouquet und seine 
+           goldgelbe Farbe. Das Beste was der Sommer zu bieten hat wird in 
+           diesem Wein lebendig. Lassen Sie Ihre Sinne von diesem 
+           außerordentlichen Wein umschmeicheln und erleben Sie ein 
+           Geschmackserlebnis der besonderen Art. 
+        </Geschmack>
+		<Lage>
+			Gutenberger Hinkelstein
+		</Lage>
+		<Zahlen>
+			<Preis>18.41</Preis>
+			<Menge>
+				0,375 l
+			</Menge>
+			<WeinNummer>
+				03
+			</WeinNummer>
+		</Zahlen>
+	</Wein>
+	<!-- Ende des Wurzelelementes -->
+</WeinListe>

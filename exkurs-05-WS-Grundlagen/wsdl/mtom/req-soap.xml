@@ -1,0 +1,19 @@
+POST /wspdf/pdf HTTP/1.1
+Content-type: multipart/related;start="<rootpart*aa7ba751-86eb-4d5f-905b-809ff5ec730e@example.jaxws.sun.com>";type="application/xop+xml";boundary="uuid:aa7ba751-86eb-4d5f-905b-809ff5ec730e";start-info="text/xml"
+Soapaction: ""
+Accept: text/xml, multipart/related, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+User-Agent: JAX-WS RI 2.1.5-hudson-$BUILD_NUMBER-
+Host: 127.0.0.1:8888
+Connection: keep-alive
+Content-Length: 528
+
+--uuid:aa7ba751-86eb-4d5f-905b-809ff5ec730e
+Content-Id: <rootpart*aa7ba751-86eb-4d5f-905b-809ff5ec730e@example.jaxws.sun.com>Content-Type: application/xop+xml;charset=utf-8;type="text/xml"Content-Transfer-Encoding: binary
+   <?xml version='1.0' encoding='UTF-8'?>
+      <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+         <S:Body>
+            <ns2:sendeRechnungPerPDF xmlns:ns2="http://rechnung.service.jaxws.traudel.de/">
+               <arg0>1</arg0>
+            </ns2:sendeRechnungPerPDF>
+         </S:Body>
+      </S:Envelope>--uuid:aa7ba751-86eb-4d5f-905b-809ff5ec730e--

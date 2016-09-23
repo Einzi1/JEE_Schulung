@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://komplexer.ws.ejb3.seminar.kiltz.de/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+	name="DomainServiceImplService" targetNamespace="http://komplexer.ws.ejb3.seminar.kiltz.de/">
+	<wsdl:types>
+	<!-- Die WSDL von der Platte -->
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://komplexer.ws.ejb3.seminar.kiltz.de/"
+			elementFormDefault="unqualified" targetNamespace="http://komplexer.ws.ejb3.seminar.kiltz.de/"
+			version="1.0">
+
+			<xs:element name="getDomainObject" type="tns:getDomainObject" />
+
+			<xs:element name="getDomainObjectResponse" type="tns:getDomainObjectResponse" />
+
+			<xs:element name="setDomainObject" type="tns:setDomainObject" />
+
+			<xs:element name="setDomainObjectResponse" type="tns:setDomainObjectResponse" />
+
+			<xs:element name="setUndGetDomainObject" type="tns:setUndGetDomainObject" />
+
+			<xs:element name="setUndGetDomainObjectResponse" type="tns:setUndGetDomainObjectResponse" />
+
+			<xs:complexType name="getDomainObject">
+				<xs:sequence />
+			</xs:complexType>
+
+			<xs:complexType name="getDomainObjectResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="return" type="tns:domainObject" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="domainObject">
+				<xs:sequence>
+					<xs:element name="datum" type="xs:date" />
+					<xs:element minOccurs="0" name="id" type="xs:long" />
+					<xs:element minOccurs="0" name="text" type="xs:string" />
+					<xs:element name="zahl" type="xs:double" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="setUndGetDomainObject">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="obj" type="tns:domainObject" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="setUndGetDomainObjectResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="return" type="tns:domainObject" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="setDomainObject">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="obj" type="tns:domainObject" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="setDomainObjectResponse">
+				<xs:sequence />
+			</xs:complexType>
+
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="getDomainObject">
+		<wsdl:part element="tns:getDomainObject" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setDomainObject">
+		<wsdl:part element="tns:setDomainObject" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setDomainObjectResponse">
+		<wsdl:part element="tns:setDomainObjectResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getDomainObjectResponse">
+		<wsdl:part element="tns:getDomainObjectResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setUndGetDomainObject">
+		<wsdl:part element="tns:setUndGetDomainObject" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="setUndGetDomainObjectResponse">
+		<wsdl:part element="tns:setUndGetDomainObjectResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="DomainService">
+		<wsdl:operation name="getDomainObject">
+			<wsdl:input message="tns:getDomainObject" name="getDomainObject">
+			</wsdl:input>
+			<wsdl:output message="tns:getDomainObjectResponse" name="getDomainObjectResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setUndGetDomainObject">
+			<wsdl:input message="tns:setUndGetDomainObject" name="setUndGetDomainObject">
+			</wsdl:input>
+			<wsdl:output message="tns:setUndGetDomainObjectResponse"
+				name="setUndGetDomainObjectResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setDomainObject">
+			<wsdl:input message="tns:setDomainObject" name="setDomainObject">
+			</wsdl:input>
+			<wsdl:output message="tns:setDomainObjectResponse" name="setDomainObjectResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DomainServiceImplServiceSoapBinding"
+		type="tns:DomainService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getDomainObject">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="getDomainObject">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="getDomainObjectResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setUndGetDomainObject">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="setUndGetDomainObject">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="setUndGetDomainObjectResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="setDomainObject">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="setDomainObject">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="setDomainObjectResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DomainServiceImplService">
+		<wsdl:port binding="tns:DomainServiceImplServiceSoapBinding"
+			name="DomainServiceImplPort">
+			<soap:address
+				location="http://localhost:8080/EJB3WebService/DomainServiceImpl" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

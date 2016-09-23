@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Root Element: schema
+	Definition des Namespace "xsd" bei "http://www.w3.org/2001/XMLSchema"
+	xsd ist dabei der Schema-Namensraum, der Zielnamensraum hat kein Präfix.
+	
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="de">
+			Die Beschreibung einer Flasche Wein.
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="EineFlascheWein" type="EineFlascheWeinTyp"/>
+	<xsd:complexType name="EineFlascheWeinTyp">
+		<xsd:sequence>
+			<xsd:element name="Jahrgang" type="xsd:int"/>
+			<xsd:element name="Rebsorte">
+				<xsd:complexType>
+					<xsd:attribute name="Art" type="xsd:string" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Qualifikation" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Lage" type="xsd:string"/>
+			<xsd:element name="Preis">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:decimal">
+							<xsd:attribute name="Waehrung">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:pattern value="DM|EUR"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

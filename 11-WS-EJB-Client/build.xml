@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<project name="EJB3WebServiceConsumer" default="deploy" basedir=".">
+
+	<property name="appName" value="EJB3WebServiceConsumer" />
+	<target name="deploy">
+		<ant antfile="${basedir}/../Framework/build.xml" target="deploy"/>		
+	</target>
+
+</project>
+

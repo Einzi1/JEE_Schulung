@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://komplexer.ws.ejb3.seminar.kiltz.de/" xmlns:tns="http://komplexer.ws.ejb3.seminar.kiltz.de/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getDomainObject" type="tns:getDomainObject"/>
+
+  <xs:element name="getDomainObjectResponse" type="tns:getDomainObjectResponse"/>
+
+  <xs:element name="setDomainObject" type="tns:setDomainObject"/>
+
+  <xs:element name="setDomainObjectResponse" type="tns:setDomainObjectResponse"/>
+
+  <xs:element name="setUndGetDomainObject" type="tns:setUndGetDomainObject"/>
+
+  <xs:element name="setUndGetDomainObjectResponse" type="tns:setUndGetDomainObjectResponse"/>
+
+  <xs:complexType name="setUndGetDomainObjectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:domainObject" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="domainObject">
+    <xs:sequence>
+      <xs:element name="datum" type="xs:date"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+      <xs:element name="zahl" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setUndGetDomainObject">
+    <xs:sequence>
+      <xs:element name="obj" type="tns:domainObject" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDomainObject">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="setDomainObjectResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getDomainObjectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:domainObject" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setDomainObject">
+    <xs:sequence>
+      <xs:element name="obj" type="tns:domainObject" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

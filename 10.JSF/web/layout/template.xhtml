@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="formate.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JSF: <ui:insert name="ueberschrift"/></title>
+</h:head>
+
+<h:body>
+	
+	<div id="layoutMenue">
+		<h:form>
+		<h:link outcome="/index.xhtml"> 
+		<h:graphicImage library="image" name="logo.gif"/>
+		</h:link>
+		</h:form>
+		 
+		<ui:insert name="inhaltLinks">
+			<ui:include src="menue.xhtml" />
+		</ui:insert>
+	</div>
+	<div id="layoutRechts">
+		<h3>Info</h3>
+		<ui:insert name="inhaltRechts" />
+		<p>
+		<h:messages/>
+		</p>
+	</div>
+	<div id="layoutOben">
+		JSF: <ui:insert name="ueberschrift" /> 
+	</div>
+	
+	<div id="layoutInhalt">
+		<ui:insert name="inhalt" />
+	</div>
+	
+</h:body>
+</html>

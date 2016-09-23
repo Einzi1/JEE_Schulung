@@ -1,0 +1,383 @@
+/* Layout */
+#layoutMenue  {
+	float:left; 
+	width:12em; 
+	height:90%;
+	margin: 10px;
+	
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+#layoutOben  {
+	height: 50px;
+	margin-top: 1cm;
+	margin-left: 1cm;
+	
+	font-size : 16pt;
+	color : #005091;
+	vertical-align : middle;
+	
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 1px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+#layoutInhalt  {
+	
+	margin-left : 50px;
+	margin-top : 10px;
+	margin-right : 10px;
+	margin-bottom : 10px;
+
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+	
+	height : 90%;
+}
+
+#layoutRechts {
+	float:right; 
+	width:12em; 
+	height:90%;
+	
+	margin-top: 50px;
+	
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 1px;
+	border-right-width : 0px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+/* Layout - Ende*/
+
+
+/* Tags */
+body  {
+	font-size : 10pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	color : #000000;
+	background-color : #ffffff;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+}
+
+
+LI  {
+	font-size : 10pt;
+	font-weight : normal;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	text-align : left;
+}
+
+h1  {
+	font-size : 14pt;
+	font-weight : normal;
+	font-family : verdana,arial,Helvetica,sans-serif;
+	text-align : left;
+}
+
+H2  {
+	font-size : 12pt;
+	font-weight : bold;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+}
+
+H3  {
+	font-size : 10pt;
+	font-weight : bold;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+}
+
+/* Tags - Tabelle */
+
+td  {
+	font-size : 10pt;
+	vertical-align : middle;
+	padding-top: 1px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+
+tr.hell, th.hell, td.hell  {
+	background-color : #F2F6F9;
+}
+
+tr.norm, th.norm, td.norm  {
+	background-color : white;
+}
+
+td.StrichOben  {
+	border-top-width : 1px;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+}
+
+td.StrichUnten  {
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+
+td.StrichRechts  {
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.normZentr  {
+	text-align : center;
+	vertical-align : middle;
+}
+
+td.normReUnt  {
+	text-align : right;
+	vertical-align : bottom;
+}
+
+td.normZentrUnten  {
+	text-align : center;
+	vertical-align : bottom;
+}
+
+
+/* Links */
+a:link  {
+	font-family : verdana,arial,Helvetica,sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #005091;
+}
+
+a:visited  {
+	font-family : verdana,arial,Helvetica,sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #005091;
+}
+
+a:active  {
+	font-family : verdana,arial,Helvetica,sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #E23130;
+}
+
+A.Ohne  {
+	text-decoration : none;
+}
+
+/* Form-Elements */
+input  {
+	font-size : 12px;
+	font-family : Verdana;
+	border-width : 1px;
+	border-color : black;
+}
+
+textarea  {
+	font-size : 12px;
+	font-family : Verdana;
+	border-width : 1px;
+	border-color : black;
+}
+
+select  {
+	font-size : 12px;
+	font-family : Verdana;
+	border-width : 1px;
+	border-color : black;
+}
+
+/* Farben */
+.rot  {
+	color : #E23130;
+}
+
+.dunkelblau  {
+	color : #005091;
+}
+
+.blau  {
+	color : #D9E5EF;
+}
+
+.hellblau  {
+	color : #F2F6F9;
+}
+
+.grau  {
+	color : #CFD1D4;
+}
+
+.gruen  {
+	color : #006753;
+}
+
+.gelb  {
+	color : #F9F400;
+}
+
+.weiss  {
+	color : #FFFFFF;
+}
+
+/* Unabhängige Formate */
+.Fett  {
+	font-weight : bold;
+}
+
+.Klein  {
+	font-size : 8pt;
+	color : #006753;
+}
+
+.Grossgrau  {
+	font-size : 12pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	vertical-align : middle;
+	color : gray;
+	font-weight : bold;
+}
+
+.Riesengrau  {
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	vertical-align : middle;
+	color : gray;
+	font-size : 12pt;
+	font-weight : bold;
+}
+
+.RiesenWeiss  {
+	font-size : 12pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	color : white;
+	font-weight : bold;
+	background-color : #D9E5EF;
+}
+
+.Riesenschwarz  {
+	font-size : 20pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	vertical-align : middle;
+	color : Black;
+	font-weight : bold;
+}
+
+.Grossschwarz  {
+	font-size : 9pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	vertical-align : middle;
+	color : Black;
+	font-weight : bold;
+}
+
+.Unten  {
+	vertical-align : bottom;
+}
+
+.Oben  {
+	vertical-align : top;
+}
+
+.Mitte  {
+	vertical-align : middle;
+}
+
+.Rechts  {
+	text-align : right;
+}
+
+.Links  {
+	text-align : left;
+}
+.Txt100  {
+	text-align : left;
+	width: 100px;
+}
+.Txt150  {
+	text-align : left;
+	width: 150px;
+}
+
+.RechtsMitte  {
+	vertical-align : middle;
+	text-align : right;
+}
+
+.RechtsOben  {
+	vertical-align : top;
+	text-align : right;
+}
+
+.RechtsUnten  {
+	vertical-align : bottom;
+	text-align : right;
+}
+
+.ZentriertMitte  {
+	vertical-align : middle;
+	text-align : center;
+}
+
+.ZentriertRechts  {
+	vertical-align : middle;
+	text-align : right;
+}
+
+.Zentriert  {
+	text-align : center;
+}
+
+.Grau  {
+	font-size : 10pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	vertical-align : top;
+	color : gray;
+	font-weight : bold;
+	text-align : left;
+}
+.Abstand {
+	margin-left : 0px;
+	margin-top : 10px;
+	margin-right : 0px;
+	margin-bottom : 10px;
+	
+	}
+.AbstandRundUm {
+	margin-left : 10px;
+	margin-top : 10px;
+	margin-right : 10px;
+	margin-bottom : 10px;
+	
+	}	

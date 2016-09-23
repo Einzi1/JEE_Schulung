@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Beispiel für Element-Deklarationen
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Nutzung vordefinierter Typen -->
+	<xs:element name="Jahrgang" type="xs:int"/>
+	<xs:element name="Vorname" type="xs:token"/>
+	<xs:element name="Geburtstag" type="xs:date"/> <!-- JJJJ-MM-TT -->
+
+<!-- Komplexe Typen -->
+	<!-- leeres Element: <GanzLeer/> -->
+	<xs:element  name="GanzLeer">
+	   <xs:complexType/>
+	</xs:element>
+	
+	<!-- Sequenz: festgelegte Reihenfolge -->
+	<xs:element name="Anschrift">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Strasse" type="xs:token"/>
+				<xs:element name="PLZ" type="xs:int"/>
+				<xs:element name="Ort" type="xs:token"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+<!-- Referenzen -->
+	<xs:element name="Rechnung">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- bezieht sich auf die oben definierte Anschrift -->
+				<xs:element ref="Anschrift"/>
+				<!-- und andere Daten -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- Eigene komplexe Typen -->
+	<!-- Definition des Types -->
+	<xs:complexType name="PersonenTyp">
+		<xs:sequence>
+			<xs:element name="vorname"	type="xs:string"/>
+			<xs:element name="nachname"	type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Referenzieren des Types -->
+	<xs:element name="Familie">
+		<xs:complexType name="">
+			<xs:sequence>
+				<xs:element name="Vater" type="PersonenTyp"/>
+				<xs:element name="Mutter" type="PersonenTyp"/>
+				<xs:element name="Kind" type="PersonenTyp" 
+						minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

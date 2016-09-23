@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="ueberschrift">
+		Addiere zwei Zahlen
+	</ui:define>
+	<ui:define name="inhalt">
+
+		<h2>Berechnung:</h2>
+		<h:form id="form">
+			<h:inputText id="zahl1" value="${rechner.zahl1}" />
+				+
+			<h:inputText id="zahl2" value="${rechner.zahl2}" />
+
+			<h:commandButton id="rechne" value=" = " action="${rechner.rechne}" />
+
+			<h:outputText value=" ${rechner.ergebnis}" />
+		</h:form>
+
+		<h2>Bisherige Eingaben:</h2>
+		
+		<h:form>
+			<h:dataTable value="#{rechner.berechnungen}" var="berechnung"
+				headerClass="hell" rowClasses="norm,hell"
+				columnClasses="Rechts,Rechts,Rechts">
+				<h:column>
+					<f:facet name="header">Zahl 1</f:facet>
+					<h:outputText value="#{berechnung.z1}">
+						<f:convertNumber type="number" maxFractionDigits="2"
+							minFractionDigits="2" />
+					</h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Zahl 2</f:facet>
+					<h:outputText value="#{berechnung.z2}">
+						<f:convertNumber type="number" maxFractionDigits="2"
+							minFractionDigits="2" />
+					</h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ergebnis</f:facet>
+					<h:outputText value="#{berechnung.erg}">
+						<f:convertNumber type="number" maxFractionDigits="2"
+							minFractionDigits="2" />
+					</h:outputText>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+	<ui:define name="inhaltRechts">
+		<p>Info</p>
+		<span class="rot"><h:outputText value="${rechner.info}" /></span>
+	</ui:define>
+</ui:composition>
+</html>

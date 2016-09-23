@@ -1,0 +1,370 @@
+
+#rot  {
+	color : #E23130;
+}
+
+#dunkelblau  {
+	color : #005091;
+}
+
+#blau  {
+	color : #D9E5EF;
+}
+
+#hellblau  {
+	color : #F2F6F9;
+}
+
+#grau  {
+	color : #CFD1D4;
+}
+
+#gruen  {
+	color : #006753;
+}
+
+#gelb  {
+	color : #F9F400;
+}
+
+#weiss  {
+	color : #FFFFFF;
+}
+
+body  {
+	font-size : 10pt;
+	font-family : Verdana,Nimbus Sans, Arial,Helvetica,Sans-serif;
+	color : #000000;
+	margin-left : 20px;
+	margin-top : 10px;
+	margin-right : 10px;
+	margin-bottom : 10px;
+	background-color : #ffffff;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+}
+
+body.Menue  {
+	font-size : 10pt;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	color : #000000;
+	background-color : #ffffff;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+	margin-left : 0px;
+	margin-top : 0px;
+	margin-right : 0px;
+	margin-bottom : 0px;
+}
+
+LI  {
+	font-size : 10pt;
+	font-weight : normal;
+	font-family : Verdana,Arial,Helvetica,Sans-serif;
+	text-align : left;
+}
+
+h1  {
+	font-size : 14pt;
+	font-weight : normal;
+	font-family : verdana,arial,Helvetica,sans-serif;
+	text-align : left;
+}
+
+H2  {
+	font-size : 12pt;
+	font-weight : bold;
+}
+
+H3  {
+	font-size : 10pt;
+	font-weight : bold;
+}
+
+H4  {
+	font-size : 8pt;
+	font-weight : bold;
+}
+
+table, tr  {
+	font-size : 10pt;
+}
+
+td  {
+	font-size : 10pt;
+	vertical-align : top;
+	background-repeat : no-repeat;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+}
+
+td.hell  {
+	font-size : 10pt;
+	background-color : #F2F6F9;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.norm  {
+	font-size : 10pt;
+	background-color : white;
+	border-color : white;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.StrichOben  {
+	font-size : 10pt;
+	background-color : white;
+	border-top-width : 1px;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+}
+
+td.StrichUnten  {
+	font-size : 10pt;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 1px;
+	border-top-width : 0px;
+	background-color : white;
+}
+
+td.StrichRechts  {
+	background-color : white;
+	font-size : 10pt;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 1px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.normZentr  {
+	font-size : 10pt;
+	background-color : white;
+	text-align : center;
+	vertical-align : middle;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.normReUnt  {
+	font-size : 10pt;
+	background-color : white;
+	text-align : right;
+	vertical-align : bottom;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+td.normZentrUnten  {
+	font-size : 10pt;
+	background-color : white;
+	text-align : center;
+	vertical-align : bottom;
+	border-color : #D9E5EF;
+	border-style : solid;
+	border-left-width : 0px;
+	border-right-width : 0px;
+	border-bottom-width : 0px;
+	border-top-width : 0px;
+}
+
+#Fett  {
+	font-weight : bold;
+}
+
+#Klein  {
+	font-size : 8pt;
+	text-align : right;
+	color : #000000;
+}
+
+#Grossgrau  {
+	font-size : 10pt;
+	vertical-align : middle;
+	color : gray;
+	font-weight : bold;
+}
+
+#Riesengrau  {
+	font-size : 12pt;
+	vertical-align : middle;
+	color : gray;
+	font-weight : bold;
+}
+#HintenBlau {
+	background-color : #F2F6F9;
+}
+
+#RiesenWeiss  {
+	font-size : 12pt;
+	color : white;
+	font-weight : bold;
+	background-color : #D9E5EF;
+}
+
+#Riesenschwarz  {
+	font-size : 20pt;
+	vertical-align : middle;
+	color : Black;
+	font-weight : bold;
+}
+
+#Grossschwarz  {
+	font-size : 9pt;
+	vertical-align : middle;
+	color : Black;
+	font-weight : bold;
+}
+
+#Unten  {
+	vertical-align : bottom;
+}
+
+#Oben  {
+	vertical-align : top;
+}
+
+#Mitte  {
+	vertical-align : middle;
+}
+
+#Rechts  {
+	text-align : right;
+}
+
+#Links  {
+	text-align : left;
+}
+
+#RechtsMitte  {
+	vertical-align : middle;
+	text-align : right;
+}
+
+#RechtsOben  {
+	vertical-align : top;
+	text-align : right;
+}
+
+#RechtsUnten  {
+	vertical-align : bottom;
+	text-align : right;
+}
+
+#ZentriertMitte  {
+	vertical-align : middle;
+	text-align : center;
+}
+
+#ZentriertRechts  {
+	vertical-align : middle;
+	text-align : right;
+}
+
+#Zentriert  {
+	text-align : center;
+}
+
+#Grau  {
+	font-size : 10pt;
+	vertical-align : top;
+	color : gray;
+	font-weight : bold;
+	text-align : left;
+}
+
+
+a:link  {
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #005091;
+}
+
+a:visited  {
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #005091;
+}
+
+a:active  {
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+	color : #E23130;
+}
+
+A.Ohne  {
+	text-decoration : none;
+}
+
+
+#butt  {
+	font-size : 11px;
+	border-width : 1px;
+	border-color : black;
+	background : white;
+	cursor : hand;
+}
+
+#inp  {
+	font-size : 11px;
+	border-width : 1px;
+	border-color : black;
+}
+
+input  {
+	font-size : 12px;
+	border-width : 1px;
+	border-color : black;
+}
+
+textarea  {
+	font-size : 12px;
+	border-width : 1px;
+	border-color : black;
+}
+
+select  {
+	font-size : 12px;
+	border-width : 1px;
+	border-color : black;
+}
+
+#PreLink {font-size:10pt;
+        font-weight:normal;
+		color:blue;
+        font-family:fixedsys;
+		background-color:white;}
+
+
+        
