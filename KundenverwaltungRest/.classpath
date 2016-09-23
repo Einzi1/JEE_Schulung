@@ -6,5 +6,5 @@
 	<classpathentry kind="var" path="JBOSS_HOME/modules/system/layers/base/javax/ws/rs/api/main/jboss-jaxrs-api_1.1_spec-1.0.1.Final-redhat-3.jar"/>
 	<classpathentry kind="var" path="JBOSS_HOME/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-2.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Kundenverwaltung"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>

@@ -9,7 +9,7 @@ import de.kundenverwaltung.KundenService;
 import de.kundenverwaltung.PflichtfeldException;
 
 @Stateless(name = "KundenSIB")
-@WebService(serviceName = "KundenService", name = "KundenService", endpointInterface = "de.kundenverwaltung.webservice.KundenSIB")
+@WebService(serviceName = "KundenService", name = "KundenService")
 public class KundenSIB implements KundenSEI {
 
 	@EJB
