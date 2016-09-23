@@ -1,0 +1,50 @@
+Aufgabe zu SLSB
+===============
+
+Das Thema
+---------
+Suchen Sie sich ein Thema, über das Sie schreiben möchten. Beispiele für Themen wären: 
+* Kunden
+* Artikel
+* Aufgaben
+* Hotel
+Für das Thema sollen minimal die Basisoperationen CRUD (Create, Read, Update und Delete) 
+ausgeführt werden können.
+
+Im ersten Schritt sollen einfache Domain-Objekte verwaltet werden. Später im Projekt JPA werden komplexere Domain-Strukturen behandelt.
+
+Die Remote Schnittstelle
+------------------------
+Erzeugen Sie eine Remote-Schnittstelle und eine Implementation (SLSB) das die Basis-Operationen für Ihr Thema anbietet.
+Z.B:
+KundenVerwaltung
+* Kunde neuerKunde(Kunde k) throws PflichtfeldException
+* Kunde aendereKunde(Kunde k) throws PflichtfeldException
+* Kunde holeKunde(Long id)
+* void loscheKunde(Long id)
+
+Die Implementation kann recht rudimentär sein. Eine kleine Exception-Situation sollte angeboten werden.
+
+Die Lokale SLS als DAO
+----------------------
+Verbinden Sie die Remote-SLSB mit einer Local-SLSB, die die Rolle eines DAO übernimmt:
+
+KundenDao
+* Kunde save(Kunde k)
+* Kunde update(Kunde k)
+* Kunde getById(Long id)
+* void delete(Long id)
+
+Die Implementation kann eine einfache InMemory-Variante realisieren.
+
+Bei Wunsch können Sie schon bei der Erzeugung der Bean ein paar Testdaten anlegen.
+
+Der Client als JUnit-Test
+-------------------------
+Erzeugen Sie einen JUnit4 Test, der die Basisfunktionalitäten überprüft.
+
+Optional: Erzeuge Zeitstopper-Aspect für die DAO-Methoden
+---------------------------------------------------------
+Erzeuge einen Aspekt der die benötigten Zeiten für die DAO-Methoden stoppt und mit Namen der Methode 
+auf die Konsole ausgibt.
+

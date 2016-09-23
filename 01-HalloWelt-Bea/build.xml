@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+
+<project name="KommunikationsTest" default="deploy" basedir=".">
+
+	<property environment="env" />
+	<property name="appName" value="KommunikationsTest" />
+
+	<property name="build.classes.dir" value="${basedir}/bin" />
+	<property name="bea.domain.home" value="C:/bea/user_projects/domains/base_domain" />
+
+
+	<target name="deploy">
+		<jar jarfile="${appName}.jar">
+			<fileset dir="${build.classes.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</jar>
+		<copy file="${appName}.jar" todir="${bea.domain.home}/autodeploy" />
+	</target>
+
+
+</project>
+

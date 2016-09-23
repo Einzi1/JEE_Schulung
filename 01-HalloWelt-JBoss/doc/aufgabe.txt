@@ -1,0 +1,11 @@
+﻿	
+Aufgabe:
+--------
+Erzeugen Sie eine Stateless Session Bean "InfoService", die Methoden für folgende Informationen anbietet:
+- Uhrzeit auf dem Server system.get?
+- Freier Speicher auf dem Server system.get?
+- Benutzernamen unter dem der Server läuft system.getproperty.getusername
+
+Erstellen Sie einen Client (gerne als JUnit-Test), der die drei Methoden testet.
+ 
+(Zeit: 10-15 Min) 
