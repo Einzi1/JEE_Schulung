@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<project name="REST" default="deploy" basedir=".">
+
+	<property name="appName" value="rs" />
+	<target name="deploy">
+		<ant antfile="${basedir}/../Framework/build.xml" target="deployWar"/>		
+	</target>
+
+</project>
+
